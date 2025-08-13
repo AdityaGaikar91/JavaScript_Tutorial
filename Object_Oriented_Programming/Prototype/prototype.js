@@ -27,3 +27,11 @@ const arr = [1, 2, 3, 4, 5]
 
 //myDate ----> Date.prototype ----> Object.prototype ----> null
 
+
+// Shadowing properties
+
+let myDate = new Date(2025, 13, 7);
+
+myDate.getFullYear = function () {
+    console.log("New Date function added");
+}
