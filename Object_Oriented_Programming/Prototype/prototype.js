@@ -15,3 +15,15 @@ const user = {
 // JavaScript engine attaches prototype to objects by default
 
 const arr = [1, 2, 3, 4, 5]
+
+
+// What is Prototype Chain
+
+// To get a prototype of any object we have a method called Object.getprototypeOf
+// It is a Standard prototype of Object which is called as Object.prototype
+
+// user -----> __proto__ ----> Object.prototype
+// user.__proto__ -----> Object.prototype-----> Object.prototype.__proto__ ---> null
+
+//myDate ----> Date.prototype ----> Object.prototype ----> null
+
