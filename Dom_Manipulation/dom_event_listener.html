@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+    <button>Reset</button>
+
+    <script>
+        document.querySelector("p").addEventListener("click", function() {
+            document.querySelector("body").style.backgroundColor = "orange";
+        });
+
+        document.querySelector("p").addEventListener("click", function() {
+            document.querySelector("p").innerHTML = "Multiple events"
+        });
+
+        document.querySelector("p").addEventListener("mouseover", mouseOverFunction);
+
+        function mouseOverFunction() {
+            document.querySelector("p").innerHTML = "Mouse Over";
+        }
+
+        document.querySelector("button").addEventListener("click", function() {
+            document.querySelector("p").removeEventListener("mouseover", mouseOverFunction);
+        })
+
+        window.addEventListener("resize", setText);
+
+        function setText() {
+            document.querySelector("button").innerHTML = "welcome"
+        }
+    </script>
+</body>
+</html>
