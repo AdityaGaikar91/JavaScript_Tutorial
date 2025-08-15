@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div{
+            height: 400px;
+            width: 400px;
+            background-color: aquamarine;
+        }
+
+        p{
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            justify-self: center;
+        }
+    </style>
 </head>
 <body>
     <div id="div1">
@@ -15,7 +29,19 @@
         <p id="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore optio quisquam nesciunt soluta! Recusandae culpa fugit quia, porro laudantium omnis voluptatum id tempora sequi vero, rerum, doloribus dolores ratione aliquid.</p>
     </div>
     <script>
-        
+        document.getElementById("div1").addEventListener("click", function() {
+            alert("Outer Element is clicked")
+        }, false);
+        document.getElementById("para1").addEventListener("click", function() {
+            alert("Inner Element is clicked")
+        }, false);
+
+        document.getElementById("div2").addEventListener("click", function() {
+            alert("Outer Element is clicked")
+        }, true);
+        document.getElementById("para2").addEventListener("click", function() {
+            alert("Inner Element is clicked")
+        }, true);
     </script>
 </body>
 </html>
