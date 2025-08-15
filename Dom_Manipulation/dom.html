@@ -1,0 +1,42 @@
+<!-- 
+ Find element on webpage using id
+ using classNames
+ using TagNames
+ using css selector 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <h1 class="header">Learning DOM Manipulation</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae ducimus minus aliquid repellat recusandae dolores enim molestias dicta doloribus natus corrupti exercitationem rem esse voluptas, aspernatur omnis odio distinctio et.</p>
+        <p class="header">Lorem ipsum dolor sit.</p>
+        <img id="myImg" src="void.JPG" alt="void image">
+        <p id="newPara"></p>
+    </div>
+
+    <script>
+
+        const rootNode = document.getElementById("root");
+        console.log(rootNode);
+        const paragraphs = document.getElementsByTagName("p");
+        console.log(paragraphs);
+        const hearderClassElements = document.getElementsByClassName("header");
+        console.log(hearderClassElements);
+        const element = document.querySelectorAll(".header");
+        console.log(element);
+        
+        const header = document.querySelector(".header");
+        header.innerHTML = "DOM Manipulation in JS.";
+        document.getElementById("myImg").src="calm.jpg";
+
+        document.getElementById("newPara").innerHTML = "<h3> Hello </h3>"
+    </script>
+
+</body>
+</html>
