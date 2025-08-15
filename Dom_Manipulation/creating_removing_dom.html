@@ -7,13 +7,24 @@
 </head>
 <body>
     <div id="parent">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+        <p id="existingPara">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
     </div>
     <script>
+
+        // to create new element in Dom we have createElement() method
         const para = document.createElement("p");
         para.innerHTML = "New Paragraph added";
+        // to add this element in the DOM we have appendChild() method
+        // this will add the element at the end of the parent element
         const parent = document.getElementById("parent");
-        parent.appendChild(para);
+        // parent.appendChild(para);
+
+        // to add element before any existing element we have insertBefore() method 
+        const existingPara = document.getElementById("existingPara");
+        parent.insertBefore(para, existingPara);
+
+        // for removing any element we hava remove() method
+        existingPara.remove();
     </script>
 </body>
 </html>
