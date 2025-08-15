@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>DOM Events</h1>
+        <p>Getting the best understanding of dom events</p>
+        <button onclick="changeBackground()">Submit</button>
+        <div id="welcome" style="width: 200px; height: 200px; border: 1px solid black">
+            Welcome!!
+        </div>
+        <input onchange="uppercase()" type="text">
+    </div>
+
+    <script>
+        function changeBackground() {
+            document.querySelector("body").style.backgroundColor = "yellow";
+
+        }
+
+        document.getElementById("welcome").onmouseover = changeText;
+        document.getElementById("welcome").onmouseout = revertText;
+
+        function changeText() {
+            document.getElementById("welcome").innerHTML="Thank You!!";
+        }
+
+        function revertText() {
+            document.getElementById("welcome").innerHTML = "Welcome!!";
+        }
+
+        function uppercase() {
+            const input = document.querySelector("input");
+            input.value = input.value.toUpperCase();
+        }
+        
+
+    </script>
+</body>
+</html>
