@@ -3,25 +3,7 @@
 // setTimeout is webAPI which allows us to execute code after some delay
 console.log("Hello Javascript");
 
-setTimeout(
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    () => {
+setTimeout(() => {
     console.log("Course from Internshala 2");
 },2000);
 
