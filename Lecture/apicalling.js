@@ -1,6 +1,6 @@
 async function abc() {
 
-let data = await fetch('https://fakestoreapi.com/products');
+let data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.99740&lng=79.00110&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
 let resp = await data.json();
 console.log(resp);
 
