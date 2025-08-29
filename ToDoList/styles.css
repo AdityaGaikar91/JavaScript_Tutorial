@@ -30,7 +30,7 @@ body {
 }
 
 .container {
-    height: 400px;
+    height: 90px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -39,8 +39,8 @@ body {
 
 .inputcol{
     /* border: 1px solid black; */
-    height: 100%;
-    width: 100%;
+    height: 80px;
+    width: 100vw;
     display: flex;
     justify-content: center;
 }
@@ -48,11 +48,15 @@ body {
 .textarea{
     margin: 5px 5px auto;
     height: 43px;
-    width: 65%;
+    width: 65vw;
+    font-size: 17px;
+    /* outline: none; */
+    resize: none;
     border-radius: 10px;
+    padding: 10px;
     /* border: 1px solid black; */
     box-shadow: inset 1.5px 1.5px 5px darkgray,
-                inset -1px -1px 2px rgb(95, 95, 95);
+                inset -1px -1px 1px rgb(95, 95, 95);
 }
 
 .buttoninput{
@@ -61,11 +65,24 @@ body {
     width: 90px;
     border-radius: 10px;
 }
+@media (max-width: 1000px) {
+    .buttoninput{
+        width: 55px;
+        font-size: small;
+    }
+}
 
 .buttoninput:hover{
     box-shadow: 1.8px 1.8px 2px rgb(64, 64, 64);
     cursor: pointer;
     scale: 1.1;
     background-color: lightgreen;
-    transition: all 0.8s;
+    transition: all 0.8s ease-in-out;
+}
+
+.todolist {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
